@@ -1,12 +1,14 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
-import Nav from './components/nav/Nav';
+import Navbar from './components/nav/Nav';
+import HeroList from './components/heroList/heroList';
 
 function App() {
 	return (
 		<div className='App'>
-			<Nav />
+			<Navbar />
+			<HeroList />
 		</div>
 	);
 }

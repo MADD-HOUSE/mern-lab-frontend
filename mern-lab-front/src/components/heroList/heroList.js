@@ -17,9 +17,9 @@ class heroList extends Component {
 						<div key={hero.id}>
 							<CardGroup>
 								<Button>
-									<Card style={{ 'background-color': 'yellow' }}>
+									<Card style={{ 'background-color': 'rgb(255, 232, 126)' }}>
 										<Card.Body>
-											<Card.Title style={{ color: 'black' }}>
+											<Card.Title style={{ color: 'rgb(128, 0, 1)' }}>
 												{hero.name}
 											</Card.Title>
 											<Card.Text>

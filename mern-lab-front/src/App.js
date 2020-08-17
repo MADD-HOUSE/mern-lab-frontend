@@ -5,19 +5,29 @@ import './App.css';
 import Navbar from './components/nav/Nav';
 import HeroList from './components/heroList/heroList';
 import Hero from './components/hero/hero';
-import seed from './seed.json';
 
 class App extends Component {
 	constructor() {
 		super();
 		this.state = {
-			data: seed
+			data: [],
 		};
 	}
 
-	// componentWillMount() {
-	// 	fetch(`/seed.json`).then(res => console.log(res));
-	// }
+	componentWillMount() {
+		fetch(`https://hero-royale-db-test.herokuapp.com/heroes`, {
+			method: 'GET',
+			headers: {},
+		})
+			.then((res) => res.json())
+			.then((res) => {
+				this.setState({
+					...this.state,
+					loadings: true,
+					data: res,
+				});
+			});
+	}
 
 	render() {
 		return (
@@ -26,7 +36,7 @@ class App extends Component {
 				<HeroList heroes={this.state.data} />;
 				<Route
 					path='/heroes/:heroid'
-					render={routerProps => {
+					render={(routerProps) => {
 						return <Hero id={routerProps.match} />;
 					}}
 				/>

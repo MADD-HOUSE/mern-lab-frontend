@@ -6,36 +6,55 @@ import './App.css';
 import Navbar from './components/nav/Nav';
 import HeroList from './components/heroList/heroList';
 import Hero from './components/hero/hero';
+import Home from './components/home/home';
+import Create from './components/create/create';
+import Battle from './components/battle/Battle';
 
 class App extends Component {
 	constructor() {
 		super();
 		this.state = {
-			data: [],
+			data: []
 		};
 	}
 
 	componentWillMount() {
-		axios
-			.get(`https://hero-royale-db-test.herokuapp.com/heroes`)
-			.then((res) => {
-				this.setState({
-					data: res.data,
-				});
+		axios.get(`https://hero-royale-db-test.herokuapp.com/heroes`).then(res => {
+			this.setState({
+				data: res.data
 			});
+		});
 	}
 
 	render() {
 		return (
 			<div className='App'>
 				<Navbar />
-				<HeroList heroes={this.state.data} />;
+				<Route exact path='/' component={Home} />
 				<Route
-					path='/heroes/:heroid'
-					render={(routerProps) => {
-						return <Hero id={routerProps.match} />;
+					path='/heroes'
+					render={() => {
+						return <HeroList heroes={this.state.data} />;
 					}}
 				/>
+				<Route
+					path='/create'
+					render={() => {
+						return <Create />;
+					}}
+				/>
+				<Route
+					path='/battle'
+					render={() => {
+						return <Battle />;
+					}}
+				/>
+				{/* <Route
+					path='/heroes/:heroid'
+					render={routerProps => {
+						return <Hero id={routerProps.match} />;
+					}}
+				/> */}
 			</div>
 		);
 	}

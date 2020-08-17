@@ -1,15 +1,20 @@
 import React, { Component } from 'react';
 import { Navbar, Nav, Form, FormControl, Button } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 
 class NavigationBar extends Component {
 	render() {
 		return (
 			<div>
 				<Navbar bg='dark' variant='dark'>
-					<Navbar.Brand href='#home'>Hero Cards</Navbar.Brand>
+					<Link to='/'>
+						<Navbar.Brand href='#home'>Hero Cards</Navbar.Brand>
+					</Link>
 					<Nav className='mr-auto'>
-						<Nav.Link href='#home'>Home</Nav.Link>
-						<Nav.Link href='#features'>Create</Nav.Link>
+						<Link to='/create'>
+							{' '}
+							<Nav.Link href='#features'>Create</Nav.Link>
+						</Link>
 					</Nav>
 				</Navbar>
 			</div>

@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Card, CardGroup } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 import './heroList.css';
 
 class heroList extends Component {
@@ -30,6 +31,7 @@ class heroList extends Component {
 						</div>
 					);
 				})}
+				<Link to='/battle'>Let's Fight!</Link>
 			</div>
 		);
 	}

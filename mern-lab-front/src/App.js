@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Route } from 'react-router-dom';
+import axios from 'axios';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 import Navbar from './components/nav/Nav';
@@ -15,16 +16,11 @@ class App extends Component {
 	}
 
 	componentWillMount() {
-		fetch(`https://hero-royale-db-test.herokuapp.com/heroes`, {
-			method: 'GET',
-			headers: {},
-		})
-			.then((res) => res.json())
+		axios
+			.get(`https://hero-royale-db-test.herokuapp.com/heroes`)
 			.then((res) => {
 				this.setState({
-					...this.state,
-					loadings: true,
-					data: res,
+					data: res.data,
 				});
 			});
 	}

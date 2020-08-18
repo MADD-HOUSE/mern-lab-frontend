@@ -7,10 +7,10 @@ function CreateModal(props) {
 	const handleSubmit = () => {
 		axios
 			.post(`https://hero-royale-db-test.herokuapp.com/heroes`, props.hero)
-			.then((res) => {
+			.then(res => {
 				console.log(res);
 			});
-    };
+	};
 	return (
 		<Modal
 			{...props}

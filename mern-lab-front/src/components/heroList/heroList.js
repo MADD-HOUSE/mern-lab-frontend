@@ -11,6 +11,7 @@ class heroList extends Component {
 	render() {
 		return (
 			<div className='cards'>
+				<p>Choose a Marvel or DC character among the choices below, or create your own </p>
 				{this.props.heroes.map((hero) => {
 					console.log(hero);
 					return (

@@ -15,7 +15,7 @@ class create extends Component {
 	render() {
 		return (
 			<div>
-				<Form>
+				<Form className='hero-create-form'>
 					<Form.Group controlId='formBasicEmail'>
 						<Form.Label>Hero Name</Form.Label>
 						<Form.Control type='text' placeholder='Enter Hero Name' />

@@ -1,17 +1,24 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-
+import Image from './superhero-battle-royale.jpg';
 class home extends Component {
 	render() {
 		return (
-			<div>
-				<h1>
-					<p className='superhero'>Superhero</p> <p className='battle'>Battle Royale</p>
+			<div className='homepage'>
+				<h1 className='welcome-header'>
+					Welcome to the superhero battle of the ages!
+					<p className='instructions'>Click on the picture below to begin</p>
 				</h1>
-				<img src='' alt='welcome' />
-				<Link to='/heroes'>
-					<button>Choose a fighter</button>
-				</Link>
+
+				<container className='homepage-container'>
+					<Link to='/heroes'>
+						<img
+							src={Image}
+							alt='Superhero Battle Royale'
+							className='battle-image'
+						/>
+					</Link>
+				</container>
 			</div>
 		);
 	}

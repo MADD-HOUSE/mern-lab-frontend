@@ -6,9 +6,12 @@ class NavigationBar extends Component {
 	render() {
 		return (
 			<div>
-				<Navbar bg='dark' variant='dark'>
+				<Navbar className='navbar'>
 					<Link to='/'>
-						<Navbar.Brand href='#home'>Hero Cards</Navbar.Brand>
+						<Navbar.Brand href='#home'>
+							<span className='superhero'>Superhero</span>
+							<p className='battle'>BATTLE ROYALE</p>
+						</Navbar.Brand>
 					</Link>
 					<Nav className='mr-auto'>
 						<Link to='/create'>

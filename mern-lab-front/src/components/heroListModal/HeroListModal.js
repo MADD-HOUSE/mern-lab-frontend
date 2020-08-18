@@ -10,11 +10,12 @@ function HeroListModal(props) {
 			centered>
 			<Modal.Header closeButton>
 				<Modal.Title id='contained-modal-title-vcenter'>
-					Modal heading
+					{props.chosenHero.name}
 				</Modal.Title>
 			</Modal.Header>
 			<Modal.Body>
 				<h4>Centered Modal</h4>
+				<img src={props.chosenHero.image} alt='' />
 				<p>
 					Cras mattis consectetur purus sit amet fermentum. Cras justo odio,
 					dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac

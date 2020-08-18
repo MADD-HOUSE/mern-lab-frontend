@@ -10,6 +10,7 @@ class heroList extends Component {
 		this.state = {
 			modalShow: false,
 			setModalShow: false,
+			chosenHero: {},
 		};
 	}
 
@@ -26,10 +27,20 @@ class heroList extends Component {
 						<div key={hero.id}>
 							<CardGroup>
 								<Button
+									value={hero._id}
 									className='hero-card'
-									onClick={() =>
-										this.setState({ setModalShow: true, modalShow: true })
-									}
+									onClick={(e) => {
+										// console.log(e.currentTarget.value);
+										const chosenHero = this.props.heroes.find(
+											(hero) => hero._id === e.currentTarget.value
+										);
+										console.log(chosenHero);
+										this.setState({
+											setModalShow: true,
+											modalShow: true,
+											chosenHero: chosenHero,
+										});
+									}}
 									style={{ 'background-color': 'rgb(0, 18, 186)' }}>
 									<Card style={{ 'background-color': 'rgb(255, 232, 126)' }}>
 										<Card.Body>
@@ -53,8 +64,11 @@ class heroList extends Component {
 				})}
 				<Link to='/battle'>Let's Fight!</Link>
 				<HeroListModal
+					chosenHero={this.state.chosenHero}
 					show={this.state.modalShow}
-					onHide={() => this.setState({ setModalShow: false, modalShow: false })}
+					onHide={() =>
+						this.setState({ setModalShow: false, modalShow: false })
+					}
 				/>
 			</div>
 		);

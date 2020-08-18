@@ -9,27 +9,52 @@ class create extends Component {
 			name: '',
 			publisher: 'Custom',
 			strength: null,
-			durability: null
+			durability: null,
+			newHero: {},
 		};
 	}
+	rollStats = () => {
+		const strength = Math.floor(Math.random() * 81 + 20);
+		const durability = Math.floor(Math.random() * 81 + 20);
+		this.setState({ strength, durability });
+	};
+	handleOnChange = (e) => {
+		this.setState({ name: e.target.value });
+	};
+	handleSubmit = (e) => {
+		e.preventDefault();
+		const hero = {
+			durability: this.state.durability,
+			strength: this.state.strength,
+			name: this.state.name,
+			publisher: this.state.publisher,
+		};
+		this.setState({ newHero: hero });
+	};
 	render() {
 		return (
 			<div>
 				<Form className='hero-create-form'>
 					<Form.Group controlId='formBasicEmail'>
 						<Form.Label>Hero Name</Form.Label>
-						<Form.Control type='text' placeholder='Enter Hero Name' />
-						<Form.Text className='text-muted'>Fun excerpt</Form.Text>
+						<Form.Control
+							type='text'
+							placeholder='enter hero name'
+							onChange={this.handleOnChange}
+						/>
+						<Form.Text className='stats'>
+							<p>Strength: {this.state.strength}</p>{' '}
+							<p>Durability: {this.state.durability}</p>
+						</Form.Text>
 					</Form.Group>
 					{/* <Form.Group>
-						<Form.File
-							id='exampleFormControlFile1'
-							label='Example file input'
-						/>
+						<Form.File id='addImage' label='Add hero image here' />
 					</Form.Group> */}
-					<Button variant='info'>Roll for strength and durability</Button>
+					<Button variant='info' onClick={this.rollStats}>
+						Roll for strength and durability
+					</Button>
 
-					<Button variant='primary' type='submit'>
+					<Button variant='primary' type='submit' onClick={this.handleSubmit}>
 						Create
 					</Button>
 				</Form>

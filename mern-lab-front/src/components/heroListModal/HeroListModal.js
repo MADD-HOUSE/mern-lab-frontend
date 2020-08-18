@@ -1,6 +1,7 @@
 import React from 'react';
 import { Modal, Button } from 'react-bootstrap';
 import axios from 'axios';
+import UpdateHero from '../UpdateHero/UpdateHero';
 import { Link } from 'react-router-dom';
 
 function HeroListModal(props) {
@@ -40,7 +41,10 @@ function HeroListModal(props) {
 							}}>
 							Delete
 						</Button>
-						<Button onClick=''>Update</Button>
+						<Link to={`/update/${props.chosenHero._id}`}>
+							{' '}
+							<Button>Update</Button>
+						</Link>
 					</div>
 				)}
 				<Button>Choose</Button>

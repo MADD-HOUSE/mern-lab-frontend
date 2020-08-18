@@ -9,23 +9,22 @@ import HeroList from './components/heroList/heroList';
 import Home from './components/home/home';
 import Create from './components/create/create';
 import Battle from './components/battle/Battle';
+import UpdateHero from './components/UpdateHero/UpdateHero';
 
 class App extends Component {
 	constructor() {
 		super();
 		this.state = {
-			data: [],
+			data: []
 		};
 	}
 
 	componentWillMount() {
-		axios
-			.get(`https://hero-royale-db-test.herokuapp.com/heroes`)
-			.then((res) => {
-				this.setState({
-					data: res.data,
-				});
+		axios.get(`https://hero-royale-db-test.herokuapp.com/heroes`).then(res => {
+			this.setState({
+				data: res.data
 			});
+		});
 	}
 
 	render() {
@@ -34,6 +33,7 @@ class App extends Component {
 				<Navbar />
 				<Route exact path='/' component={Home} />
 				<Route
+					exact
 					path='/heroes'
 					render={() => {
 						this.componentWillMount();
@@ -50,6 +50,14 @@ class App extends Component {
 					path='/battle'
 					render={() => {
 						return <Battle />;
+					}}
+				/>
+				<Route
+					path='/update/:heroid'
+					render={routerProps => {
+						return (
+							<UpdateHero hero={routerProps.match} heroes={this.state.data} />
+						);
 					}}
 				/>
 				{/* <Route

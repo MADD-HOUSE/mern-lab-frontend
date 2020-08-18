@@ -1,68 +1,54 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Superhero Battle Royale App
 
-## Available Scripts
+## Anyl Pascal, Daniel Smith, Dylan Girard, Morgan MacDonald
 
-In the project directory, you can run:
+## Project Description
 
-### `npm start`
+Ever wondered which superhero, in an all out battle royale, would come out on top? Look no further than this full-stack MERN app!
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Create or choose a superhero, select an opponent, then pit the two against one another to see which is stronger in battle. This app uses React/ReactBootstrap for front-end interface design. Our homemade API is built using ExpressJS, and handles our backend routing and functionality.
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+![image](planning/superhero-header.jpg)
 
-### `npm test`
+## Front-End Wireframes
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+![image](planning/home-page.jpg)
+![image](planning/character-choose-pages.jpg)
+![image](planning/battle-royale-page.jpg)
+![image](planning/create-your-own-form.jpg)
+![image](planning/character-choose-modal-update-delete.jpg)
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Component Hierarchy
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+![image](planning/hero-battle-app-component-hierarchy.png)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Back-End Request-Response Cycle
 
-### `npm run eject`
+![image](planning/request-response-cycle.png)
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## JSON Response Example
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+![image](planning/hero-json-data-example.png)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+## User Stories
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+**Minimum Viable Product Stories**
 
-## Learn More
+- As a user, I want be greeted by a slick interface that reminds me of cool comic book heroes, because I love comics.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- As a user, I want to be able to choose from a plethora of heroes from both the Marvel and DC Universes, because they are all awesome.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- As a user, I would like to create my own heroes with unique stats that can also do battle, because I like customization in my games.
 
-### Code Splitting
+- As a user, I would also like to be able to update or delete old custom heroes, because I may want to change or discard them in the future.
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+- I want to see the results of a fight between any two fighters, because I want to know who's the strongest hero of them all.
 
-### Analyzing the Bundle Size
+**Stretch Goals**
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
+- As a user, I would like to have access to an about page because I want to learn more about the creators of this app.
 
-### Making a Progressive Web App
+- As a user, I would like to be able to customize/create my own heroes in more detail using an external hero maker, because I love customization.
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+- As a user, I would like to be able create a username/password so that my custom heroes are saved to my account, because I want to use them again later on.

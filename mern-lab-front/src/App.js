@@ -5,7 +5,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 import Navbar from './components/nav/Nav';
 import HeroList from './components/heroList/heroList';
-import Hero from './components/hero/hero';
+// import Hero from './components/hero/hero';
 import Home from './components/home/home';
 import Create from './components/create/create';
 import Battle from './components/battle/Battle';
@@ -14,16 +14,18 @@ class App extends Component {
 	constructor() {
 		super();
 		this.state = {
-			data: []
+			data: [],
 		};
 	}
 
 	componentWillMount() {
-		axios.get(`https://hero-royale-db-test.herokuapp.com/heroes`).then(res => {
-			this.setState({
-				data: res.data
+		axios
+			.get(`https://hero-royale-db-test.herokuapp.com/heroes`)
+			.then((res) => {
+				this.setState({
+					data: res.data,
+				});
 			});
-		});
 	}
 
 	render() {
@@ -34,6 +36,7 @@ class App extends Component {
 				<Route
 					path='/heroes'
 					render={() => {
+						this.componentWillMount();
 						return <HeroList heroes={this.state.data} />;
 					}}
 				/>

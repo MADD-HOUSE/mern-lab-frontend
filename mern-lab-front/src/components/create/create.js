@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 // import axios from 'axios';
 import { Form, Button } from 'react-bootstrap';
-
+import CreateModal from '../CreateModal/CreateModal';
 class create extends Component {
 	constructor() {
 		super();
@@ -11,6 +11,8 @@ class create extends Component {
 			strength: null,
 			durability: null,
 			newHero: {},
+			modalShow: false,
+			setModalShow: false,
 		};
 	}
 	rollStats = () => {
@@ -29,7 +31,7 @@ class create extends Component {
 			name: this.state.name,
 			publisher: this.state.publisher,
 		};
-		this.setState({ newHero: hero });
+		this.setState({ newHero: hero, modalShow: true, setModalShow: true });
 	};
 	render() {
 		return (
@@ -58,6 +60,13 @@ class create extends Component {
 						Create
 					</Button>
 				</Form>
+				<CreateModal
+					hero={this.state.newHero}
+					show={this.state.modalShow}
+					onHide={() =>
+						this.setState({ setModalShow: false, modalShow: false })
+					}
+				/>
 			</div>
 		);
 	}

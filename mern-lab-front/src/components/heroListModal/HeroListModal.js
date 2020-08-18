@@ -14,12 +14,9 @@ function HeroListModal(props) {
 				</Modal.Title>
 			</Modal.Header>
 			<Modal.Body>
-				<h4>Centered Modal</h4>
 				<img src={props.chosenHero.image} alt='' />
 				<p>
-					Cras mattis consectetur purus sit amet fermentum. Cras justo odio,
-					dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac
-					consectetur ac, vestibulum at eros.
+					Stats
 				</p>
 			</Modal.Body>
 			<Modal.Footer>

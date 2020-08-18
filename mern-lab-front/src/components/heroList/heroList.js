@@ -2,23 +2,32 @@ import React, { Component } from 'react';
 import { Card, CardGroup, Button } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import './heroList.css';
+import HeroListModal from '../heroListModal/HeroListModal';
 
 class heroList extends Component {
 	constructor(props) {
 		super(props);
-		this.state = {};
+		this.state = {
+			modalShow: false,
+			setModalShow: false,
+		};
 	}
+
 	render() {
 		return (
 			<div className='cards'>
-				<p className='choices-info'>Choose a Marvel, DC, or Custom character among the choices below to go to battle!</p>
+				<p className='choices-info'>
+					Choose a Marvel, DC, or Custom character among the choices below to go
+					to battle!
+				</p>
 				{this.props.heroes.map((hero) => {
-					console.log(hero);
+					// console.log(hero);
 					return (
 						<div key={hero.id}>
 							<CardGroup>
 								<Button
 									className='hero-card'
+									onClick={() => this.setState({ setModalShow: true })}
 									style={{ 'background-color': 'rgb(0, 18, 186)' }}>
 									<Card style={{ 'background-color': 'rgb(255, 232, 126)' }}>
 										<Card.Body>
@@ -41,6 +50,10 @@ class heroList extends Component {
 					);
 				})}
 				<Link to='/battle'>Let's Fight!</Link>
+				<HeroListModal
+					show={this.state.modalShow}
+					onHide={() => this.setState({ setModalShow: false })}
+				/>
 			</div>
 		);
 	}

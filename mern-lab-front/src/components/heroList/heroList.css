@@ -2,26 +2,32 @@
 	width: 200px;
 	height: 200px;
 }
-
+.choices-info {
+		grid-column: 1 / -1;
+		font-family: 'Avengers';
+		padding: 1em;
+		color: rgb(255, 232, 126);
+	}
 @media (min-width: 450px) {
 	.cards {
 		display: grid;
 		grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
 		grid-gap: 1em;
+		padding: 0 1em 0 1em;
 	}
 	.hero-card {
 		max-width: 200px;
 		max-height: 250px;
 	}
 	.text-name {
-		font-size: .6em;
+		font-size: 0.6em;
 	}
 	.text-muted {
-		font-size: .5em;
-		
+		font-size: 0.5em;
 	}
 	.image {
 		width: 75px;
 		height: 75px;
 	}
+	
 }

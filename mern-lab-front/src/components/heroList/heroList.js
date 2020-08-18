@@ -11,7 +11,7 @@ class heroList extends Component {
 	render() {
 		return (
 			<div className='cards'>
-				<p>Choose a Marvel or DC character among the choices below, or create your own </p>
+				<p className='choices-info'>Choose a Marvel, DC, or Custom character among the choices below to go to battle!</p>
 				{this.props.heroes.map((hero) => {
 					console.log(hero);
 					return (

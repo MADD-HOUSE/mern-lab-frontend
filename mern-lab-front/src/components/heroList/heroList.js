@@ -27,7 +27,9 @@ class heroList extends Component {
 							<CardGroup>
 								<Button
 									className='hero-card'
-									onClick={() => this.setState({ setModalShow: true })}
+									onClick={() =>
+										this.setState({ setModalShow: true, modalShow: true })
+									}
 									style={{ 'background-color': 'rgb(0, 18, 186)' }}>
 									<Card style={{ 'background-color': 'rgb(255, 232, 126)' }}>
 										<Card.Body>
@@ -52,7 +54,7 @@ class heroList extends Component {
 				<Link to='/battle'>Let's Fight!</Link>
 				<HeroListModal
 					show={this.state.modalShow}
-					onHide={() => this.setState({ setModalShow: false })}
+					onHide={() => this.setState({ setModalShow: false, modalShow: false })}
 				/>
 			</div>
 		);

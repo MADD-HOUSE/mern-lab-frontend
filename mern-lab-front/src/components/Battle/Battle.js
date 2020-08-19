@@ -14,28 +14,36 @@ function BattleModal(props) {
 					<h1>Battle</h1>
 				</Modal.Title>
 			</Modal.Header>
-			<Modal.Body className='modal-body'>
-				<div>
+			<Modal.Body className='battle-modal-body'>
+				<div className='the-battle'>
 					{!props.fighterOne ? (
 						''
 					) : (
 						<div>
-							<img src={props.fighterOne.image} alt='' />
-							<h3>VS</h3>
+							<img
+								src={props.fighterOne.image}
+								alt=''
+								className='battle-modal-image'
+							/>
 						</div>
 					)}
+					<h3 className="versus">VS</h3>
 					{!props.fighterTwo ? (
 						''
 					) : (
 						<div>
-							<img src={props.fighterTwo.image} alt='' />
-							<h3>VS</h3>
+							<img
+								src={props.fighterTwo.image}
+								alt=''
+								className='battle-modal-image'
+							/>
 						</div>
 					)}
 				</div>
 			</Modal.Body>
 			<Modal.Footer>
-				<Button>Cancel</Button>
+				<h2>Wins!</h2>
+				<Button>Battle Again</Button>
 			</Modal.Footer>
 		</Modal>
 	);

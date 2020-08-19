@@ -12,7 +12,7 @@ function HeroListModal(props) {
 			.delete(
 				`https://hero-royale-db-test.herokuapp.com/heroes/${props.chosenHero._id}`
 			)
-			.then(res => console.log(res));
+			.then((res) => console.log(res));
 	};
 	return (
 		<Modal
@@ -33,7 +33,11 @@ function HeroListModal(props) {
 					{props.fighterOne ? (
 						<div>
 							<p>{props.fighterOne.name}</p>
-							<img src={props.fighterOne.image} alt='' />
+							<img
+								src={props.fighterOne.image}
+								alt=''
+								className='modal-image'
+							/>
 							<p>Strength: {props.fighterOne.strength}</p>
 							<p>Durability: {props.fighterOne.durability}</p>
 							<h3>VS</h3>

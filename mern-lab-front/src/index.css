@@ -73,5 +73,19 @@ code {
 	justify-content: center;
 }
 .create-text {
-	font-family: Helvetica
+	font-family: Helvetica;
+}
+.create-image {
+	max-width: 450px;
+}
+.battle-modal-image {
+	max-width: 150px;
+	padding: 10px;
+}
+.the-battle {
+	display: grid;
+	grid-template-columns: 1fr 0.5fr 1fr;
+}
+.versus {
+	margin-top: 75px;
 }

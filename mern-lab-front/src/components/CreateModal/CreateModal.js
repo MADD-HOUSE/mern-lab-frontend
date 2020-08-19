@@ -23,7 +23,7 @@ function CreateModal(props) {
 				</Modal.Title>
 			</Modal.Header>
 			<Modal.Body>
-				<img src={props.hero.image} alt='created' />
+				<img src={props.hero.image} alt='created' className='create-image' />
 				<p>Strength: {props.hero.strength}</p>
 				<p>Durability: {props.hero.durability}</p>
 			</Modal.Body>

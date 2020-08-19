@@ -4,10 +4,10 @@ import axios from 'axios';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 import Navbar from './components/nav/Nav';
-import HeroList from './components/heroList/heroList';
+import HeroList from './components/HeroList/HeroList';
 // import Hero from './components/hero/hero';
 import Home from './components/home/home';
-import Create from './components/create/create';
+import Create from './components/Create/Create';
 import Battle from './components/battle/Battle';
 import UpdateHero from './components/UpdateHero/UpdateHero';
 

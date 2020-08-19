@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component } from 'react'
 // import axios from 'axios';
 import { Form, Button } from 'react-bootstrap';
 import CreateModal from '../CreateModal/CreateModal';

@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Card, CardGroup, Button } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
-import './heroList.css';
+import './HeroList.css';
 import HeroListModal from '../heroListModal/HeroListModal';
 
 class HeroList extends Component {

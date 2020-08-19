@@ -24,7 +24,7 @@ Create or choose a superhero, select an opponent, then pit the two against one a
 
 ## Back-End Request-Response Cycle
 
-![image](planning/request-response-cycle.png)
+![image](planning/Request-Response-Cycle.png)
 
 ## JSON Response Example
 

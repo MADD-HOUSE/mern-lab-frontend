@@ -11,18 +11,25 @@ class HeroList extends Component {
 			modalShow: false,
 			setModalShow: false,
 			chosenHero: {},
+			fighterOne: null,
+			fighterTwo: null
 		};
 	}
 
 	render() {
 		return (
 			<div className='main-view'>
-				<h1 className='choices-info'>
-					Choose a Marvel, DC, or Custom character among the choices below to go
-					to battle!
-				</h1>
+				{!this.state.fighterOne ? (
+					<h1 className='choices-info'>
+						Choose a Marvel, DC, or Custom character among the choices below to
+						go to battle!
+					</h1>
+				) : (
+					<h1 className='choices-info'>Choose Your Opponent</h1>
+				)}
+
 				<div className='cards'>
-					{this.props.heroes.map((hero) => {
+					{this.props.heroes.map(hero => {
 						// console.log(hero);
 						return (
 							<div key={hero.id}>
@@ -30,16 +37,16 @@ class HeroList extends Component {
 									<Button
 										className='hero-card'
 										value={hero._id}
-										onClick={(e) => {
+										onClick={e => {
 											// console.log(e.currentTarget.value);
 											const chosenHero = this.props.heroes.find(
-												(hero) => hero._id === e.currentTarget.value
+												hero => hero._id === e.currentTarget.value
 											);
 											console.log(chosenHero);
 											this.setState({
 												setModalShow: true,
 												modalShow: true,
-												chosenHero: chosenHero,
+												chosenHero: chosenHero
 											});
 										}}
 										style={{ 'background-color': 'rgb(0, 18, 186)' }}>
@@ -65,11 +72,35 @@ class HeroList extends Component {
 					})}
 					<Link to='/battle'>Let's Fight!</Link>
 					<HeroListModal
+						cancel={() => {
+							this.setState({
+								fighterOne: null,
+								fighterTwo: null,
+								setModalShow: false,
+								modalShow: false
+							});
+						}}
 						chosenHero={this.state.chosenHero}
 						show={this.state.modalShow}
+						fighterOne={this.state.fighterOne}
 						onHide={() =>
 							this.setState({ setModalShow: false, modalShow: false })
 						}
+						confirmFirstChoice={() => {
+							if (!this.state.fighterOne) {
+								this.setState({
+									fighterOne: this.state.chosenHero,
+									setModalShow: false,
+									modalShow: false
+								});
+							} else {
+								this.setState({
+									fighterTwo: this.state.chosenHero,
+									setModalShow: false,
+									modalShow: false
+								});
+							}
+						}}
 					/>
 				</div>
 			</div>

@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import { Card, CardGroup, Button } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
-import './HeroList.css';
-import HeroListModal from '../HeroListModal/HeroListModal';
+import './heroList.css';
+import HeroListModal from '../heroListModal/HeroListModal';
 
 class HeroList extends Component {
 	constructor(props) {

@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 import { Card, CardGroup, Button } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
+import { Route } from 'react-router-dom';
 import './HeroList.css';
 import HeroListModal from '../HeroListModal/HeroListModal';
+import Battle from '../Battle/Battle';
 
 class HeroList extends Component {
 	constructor(props) {
@@ -12,7 +13,9 @@ class HeroList extends Component {
 			setModalShow: false,
 			chosenHero: {},
 			fighterOne: null,
-			fighterTwo: null
+			fighterTwo: null,
+			battleModalShow: false,
+			setBattleModalShow: false
 		};
 	}
 
@@ -70,7 +73,7 @@ class HeroList extends Component {
 							</div>
 						);
 					})}
-					<Link to='/battle'>Let's Fight!</Link>
+
 					<HeroListModal
 						cancel={() => {
 							this.setState({
@@ -78,6 +81,13 @@ class HeroList extends Component {
 								fighterTwo: null,
 								setModalShow: false,
 								modalShow: false
+							});
+						}}
+						confirmBattle={() => {
+							this.setState({
+								fighterTwo: this.state.chosenHero,
+								setBattleModalShow: true,
+								battleModalShow: true
 							});
 						}}
 						chosenHero={this.state.chosenHero}
@@ -101,6 +111,17 @@ class HeroList extends Component {
 								});
 							}
 						}}
+					/>
+					<Battle
+						show={this.state.battleModalShow}
+						onHide={() =>
+							this.setState({
+								setBattleModalShow: false,
+								battleModalShow: false
+							})
+						}
+						fighterOne={this.state.fighterOne}
+						fighterTwo={this.state.fighterTwo}
 					/>
 				</div>
 			</div>

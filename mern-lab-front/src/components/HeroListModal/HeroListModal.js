@@ -3,6 +3,7 @@ import { Modal, Button } from 'react-bootstrap';
 import axios from 'axios';
 import UpdateHero from '../UpdateHero/UpdateHero';
 import { Link } from 'react-router-dom';
+import Battle from '../Battle/Battle';
 
 function HeroListModal(props) {
 	const handleDelete = () => {
@@ -69,11 +70,15 @@ function HeroListModal(props) {
 						</Link>
 					</div>
 				)}
-				<Button
-					onClick={props.confirmFirstChoice}
-					className='modal-choose-button'>
-					Choose
-				</Button>
+				{!props.fighterOne ? (
+					<Button
+						onClick={props.confirmFirstChoice}
+						className='modal-choose-button'>
+						Choose
+					</Button>
+				) : (
+					<Button onClick={props.confirmBattle}>Battle</Button>
+				)}
 				<Button onClick={props.cancel}>Cancel</Button>
 			</Modal.Footer>
 		</Modal>

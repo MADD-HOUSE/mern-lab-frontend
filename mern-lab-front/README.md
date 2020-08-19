@@ -6,7 +6,7 @@
 
 Ever wondered which superhero, in an all out battle royale, would come out on top? Look no further than this full-stack MERN app!
 
-Create or choose a superhero, select an opponent, then pit the two against one another to see which is stronger in battle. This app uses React/ReactBootstrap for front-end interface design. Our homemade API is built using ExpressJS, and handles our backend routing and functionality.
+Create or choose a superhero, select an opponent, then pit the two against one another to see which is stronger in battle. This app uses React/ReactBootstrap for front-end interface design. Our back-end is a homemade API built using Node, Mongo, MongoDB, and ExpressJS.
 
 ![image](planning/superhero-header.jpg)
 
@@ -17,7 +17,6 @@ Create or choose a superhero, select an opponent, then pit the two against one a
 ![image](planning/battle-royale-page.jpg)
 ![image](planning/create-your-own-form.jpg)
 ![image](planning/character-choose-modal-update-delete.jpg)
-
 
 ## Component Hierarchy
 

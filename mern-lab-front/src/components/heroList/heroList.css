@@ -1,32 +1,55 @@
 .image {
-	width: 200px;
-	height: 200px;
+	width: 75px;
+	height: 100px;
 }
+
 .choices-info {
-	grid-column: 1 / -1;
 	font-family: 'Avengers';
-	padding: 1em;
+	padding-top: 0.5em;
+	max-width: 280px;
+	margin: 0 auto;
 	color: rgb(255, 232, 126);
 }
+
+.cards {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-gap: 0.3em;
+	max-width: 180px;
+	width: 100%;
+	max-width: 100%;
+	min-width: 100%;
+}
+
+.hero-card {
+	width: 140px;
+	height: 220px;
+}
+
+.text-name {
+	font-size: 0.6em;
+}
+.text-muted {
+	font-size: 0.5em;
+}
+
 @media (min-width: 450px) {
+	.choices-info {
+		max-width: 700px;
+		margin: 0 auto;
+	}
+
 	.cards {
 		display: grid;
+		/* margin: 0 auto; */
+		/* max-width: 700px; */
 		grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
 		grid-gap: 1em;
 		padding: 0 1em 0 1em;
 	}
+
 	.hero-card {
 		max-width: 200px;
-		max-height: 250px;
-	}
-	.text-name {
-		font-size: 0.6em;
-	}
-	.text-muted {
-		font-size: 0.5em;
-	}
-	.image {
-		width: 75px;
-		height: 75px;
+		height: 220px;
 	}
 }

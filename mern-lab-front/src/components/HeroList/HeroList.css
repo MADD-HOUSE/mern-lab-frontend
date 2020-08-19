@@ -20,6 +20,11 @@
 	max-width: 100%;
 	min-width: 100%;
 }
+.card-group {
+	display: flex;
+		justify-content: center;
+		margin: 5px;
+}
 
 .hero-card {
 	width: 140px;
@@ -43,7 +48,8 @@
 		display: grid;
 		/* margin: 0 auto; */
 		/* max-width: 700px; */
-		grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+		/* grid-template-columns: 1fr 1fr 1fr 1fr 1fr; */
+		grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
 		grid-gap: 1em;
 		padding: 0 1em 0 1em;
 	}
@@ -51,5 +57,10 @@
 	.hero-card {
 		max-width: 200px;
 		height: 220px;
+	}
+	.card-group {
+		display: flex;
+		justify-content: center;
+		margin: 5px;
 	}
 }

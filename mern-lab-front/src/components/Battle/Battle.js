@@ -2,6 +2,10 @@ import React from 'react';
 import { Modal, Button } from 'react-bootstrap';
 
 function BattleModal(props) {
+	// const fighterOneStats =
+	// 	props.fighterOne.strength + props.fighterOne.durability;
+	// const fighterTwoStats =
+	// 	props.fighterTwo.strength + props.fighterTwo.durability;
 	return (
 		<Modal
 			{...props}
@@ -25,9 +29,10 @@ function BattleModal(props) {
 								alt=''
 								className='battle-modal-image'
 							/>
+							<p>{props.fighterOne.name}</p>
 						</div>
 					)}
-					<h3 className="versus">VS</h3>
+					<h3 className='versus'>VS</h3>
 					{!props.fighterTwo ? (
 						''
 					) : (
@@ -37,12 +42,26 @@ function BattleModal(props) {
 								alt=''
 								className='battle-modal-image'
 							/>
+							<p>{props.fighterTwo.name}</p>
 						</div>
 					)}
 				</div>
 			</Modal.Body>
 			<Modal.Footer>
-				<h2>Wins!</h2>
+				{props.fighterOne && props.fighterTwo && (
+					<div>
+						{props.fighterOne.strength + props.fighterOne.durability >
+						props.fighterTwo.strength + props.fighterTwo.durability ? (
+							<div>
+								<h2 className='winner'>{props.fighterOne.name} Wins!</h2>
+							</div>
+						) : (
+							<div>
+								<h2>{props.fighterTwo.name} Wins!</h2>
+							</div>
+						)}
+					</div>
+				)}
 				<Button>Battle Again</Button>
 			</Modal.Footer>
 		</Modal>

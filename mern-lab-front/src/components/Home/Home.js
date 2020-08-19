@@ -1,16 +1,17 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import Image from './superhero-battle-royale.jpg';
+import Container from 'react-bootstrap/Container';
 class Home extends Component {
 	render() {
 		return (
-			<div className='homepage'>
+			<Container className='homepage'>
 				<h1 className='welcome-header'>
 					Welcome to the superhero battle of the ages!
 					<p className='instructions'>Click on the picture below to begin</p>
 				</h1>
 
-				<container className='homepage-container'>
+				<div className='homepage-container'>
 					<Link to='/heroes'>
 						<img
 							src={Image}
@@ -18,8 +19,8 @@ class Home extends Component {
 							className='battle-image'
 						/>
 					</Link>
-				</container>
-			</div>
+				</div>
+			</Container>
 		);
 	}
 }

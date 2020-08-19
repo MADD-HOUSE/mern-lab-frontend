@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Card, CardGroup, Button } from 'react-bootstrap';
+import { Card, CardGroup, Button, Container } from 'react-bootstrap';
 import { Route } from 'react-router-dom';
 import './HeroList.css';
 import HeroListModal from '../HeroListModal/HeroListModal';
@@ -15,13 +15,13 @@ class HeroList extends Component {
 			fighterOne: null,
 			fighterTwo: null,
 			battleModalShow: false,
-			setBattleModalShow: false
+			setBattleModalShow: false,
 		};
 	}
 
 	render() {
 		return (
-			<div className='main-view'>
+			<Container className='main-view'>
 				{!this.state.fighterOne ? (
 					<h1 className='choices-info'>
 						Choose a Marvel, DC, or Custom character among the choices below to
@@ -31,8 +31,8 @@ class HeroList extends Component {
 					<h1 className='choices-info'>Choose Your Opponent</h1>
 				)}
 
-				<div className='cards'>
-					{this.props.heroes.map(hero => {
+				<Container className='cards'>
+					{this.props.heroes.map((hero) => {
 						// console.log(hero);
 						return (
 							<div key={hero.id}>
@@ -40,16 +40,16 @@ class HeroList extends Component {
 									<Button
 										className='hero-card'
 										value={hero._id}
-										onClick={e => {
+										onClick={(e) => {
 											// console.log(e.currentTarget.value);
 											const chosenHero = this.props.heroes.find(
-												hero => hero._id === e.currentTarget.value
+												(hero) => hero._id === e.currentTarget.value
 											);
 											console.log(chosenHero);
 											this.setState({
 												setModalShow: true,
 												modalShow: true,
-												chosenHero: chosenHero
+												chosenHero: chosenHero,
 											});
 										}}
 										style={{ 'background-color': 'rgb(0, 18, 186)' }}>
@@ -80,14 +80,14 @@ class HeroList extends Component {
 								fighterOne: null,
 								fighterTwo: null,
 								setModalShow: false,
-								modalShow: false
+								modalShow: false,
 							});
 						}}
 						confirmBattle={() => {
 							this.setState({
 								fighterTwo: this.state.chosenHero,
 								setBattleModalShow: true,
-								battleModalShow: true
+								battleModalShow: true,
 							});
 						}}
 						chosenHero={this.state.chosenHero}
@@ -101,13 +101,13 @@ class HeroList extends Component {
 								this.setState({
 									fighterOne: this.state.chosenHero,
 									setModalShow: false,
-									modalShow: false
+									modalShow: false,
 								});
 							} else {
 								this.setState({
 									fighterTwo: this.state.chosenHero,
 									setModalShow: false,
-									modalShow: false
+									modalShow: false,
 								});
 							}
 						}}
@@ -117,14 +117,14 @@ class HeroList extends Component {
 						onHide={() =>
 							this.setState({
 								setBattleModalShow: false,
-								battleModalShow: false
+								battleModalShow: false,
 							})
 						}
 						fighterOne={this.state.fighterOne}
 						fighterTwo={this.state.fighterTwo}
 					/>
-				</div>
-			</div>
+				</Container>
+			</Container>
 		);
 	}
 }

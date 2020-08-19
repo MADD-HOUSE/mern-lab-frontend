@@ -7,7 +7,7 @@ function CreateModal(props) {
 	const handleSubmit = () => {
 		axios
 			.post(`https://hero-royale-db-test.herokuapp.com/heroes`, props.hero)
-			.then(res => {
+			.then((res) => {
 				console.log(res);
 			});
 	};
@@ -23,7 +23,7 @@ function CreateModal(props) {
 				</Modal.Title>
 			</Modal.Header>
 			<Modal.Body>
-				<img src='' alt='' />
+				<img src={props.hero.image} alt='created' />
 				<p>Strength: {props.hero.strength}</p>
 				<p>Durability: {props.hero.durability}</p>
 			</Modal.Body>

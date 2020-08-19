@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
 // import axios from 'axios';
 import { Form, Button } from 'react-bootstrap';
 import CreateModal from '../CreateModal/CreateModal';
@@ -11,6 +11,7 @@ class Create extends Component {
 			strength: null,
 			durability: null,
 			newHero: {},
+			image: '',
 			modalShow: false,
 			setModalShow: false,
 		};
@@ -23,6 +24,9 @@ class Create extends Component {
 	handleOnChange = (e) => {
 		this.setState({ name: e.target.value });
 	};
+	handleImageChange = (e) => {
+		this.setState({ image: e.target.value });
+	};
 	handleSubmit = (e) => {
 		e.preventDefault();
 		const hero = {
@@ -30,6 +34,7 @@ class Create extends Component {
 			strength: this.state.strength,
 			name: this.state.name,
 			publisher: this.state.publisher,
+			image: this.state.image,
 		};
 		this.setState({ newHero: hero, modalShow: true, setModalShow: true });
 	};
@@ -40,9 +45,16 @@ class Create extends Component {
 					<Form.Group controlId='formBasicEmail'>
 						<Form.Label>Hero Name</Form.Label>
 						<Form.Control
+							className='create-text'
 							type='text'
 							placeholder='enter hero name'
 							onChange={this.handleOnChange}
+						/>
+						<Form.Control
+							className='create-text'
+							type='text'
+							placeholder='enter image url'
+							onChange={this.handleImageChange}
 						/>
 						<Form.Text className='stats'>
 							<p>Strength: {this.state.strength}</p>{' '}

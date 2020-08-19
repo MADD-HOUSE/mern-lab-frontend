@@ -11,22 +11,28 @@ function HeroListModal(props) {
 			.delete(
 				`https://hero-royale-db-test.herokuapp.com/heroes/${props.chosenHero._id}`
 			)
-			.then(res => console.log(res));
+			.then((res) => console.log(res));
 	};
 	return (
 		<Modal
 			{...props}
 			size='lg'
 			aria-labelledby='contained-modal-title-vcenter'
-			centered>
+			centered
+			className='modal-card'>
 			<Modal.Header closeButton>
-				<Modal.Title id='contained-modal-title-vcenter'>
-					{props.chosenHero.name}
-				</Modal.Title>
+				<Modal.Title id='modal-hero-name'>{props.chosenHero.name}</Modal.Title>
 			</Modal.Header>
-			<Modal.Body>
-				<img src={props.chosenHero.image} alt='' />
-				<p>Stats</p>
+			<Modal.Body className='modal-body'>
+				<div>
+					<img
+						src={props.chosenHero.image}
+						alt={props.chosenHero.name}
+						className='modal-image'
+					/>
+					<p>Strength: {props.chosenHero.strength}</p>
+					<p>Durability: {props.chosenHero.durability}</p>
+				</div>
 			</Modal.Body>
 			<Modal.Footer>
 				{props.chosenHero.id ? (
@@ -47,7 +53,7 @@ function HeroListModal(props) {
 						</Link>
 					</div>
 				)}
-				<Button>Choose</Button>
+				<Button className='modal-choose-button'>Choose</Button>
 			</Modal.Footer>
 		</Modal>
 	);

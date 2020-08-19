@@ -8,31 +8,32 @@ class UpdateHero extends Component {
 		super();
 		this.state = {
 			name: '',
-			hero: {}
+			hero: {},
 		};
 	}
 	componentWillMount() {
 		const selectedHero = this.props.heroes.find(
-			hero => hero._id === this.props.hero.params.heroid
+			(hero) => hero._id === this.props.hero.params.heroid
 		);
 		this.setState({
-			hero: selectedHero
+			hero: selectedHero,
 		});
 	}
 
-	handleOnChange = e => {
+	handleOnChange = (e) => {
 		this.setState({ name: e.target.value });
 	};
 
-	handleOnSubmit = e => {
+	handleOnSubmit = (e) => {
 		e.preventDefault();
 		axios
 			.put(
 				`https://hero-royale-db-test.herokuapp.com/heroes/${this.props.hero.params.heroid}`,
 				{ name: this.state.name }
 			)
-			.then(res => {
+			.then((res) => {
 				console.log(res);
+				this.props.history.goBack();
 			});
 	};
 

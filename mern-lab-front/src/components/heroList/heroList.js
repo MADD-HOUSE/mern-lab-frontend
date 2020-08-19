@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import { Card, CardGroup, Button } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
-import './heroList.css';
-import HeroListModal from '../heroListModal/HeroListModal';
+import './HeroList.css';
+import HeroListModal from '../HeroListModal/HeroListModal';
 
-class heroList extends Component {
+class HeroList extends Component {
 	constructor(props) {
 		super(props);
 		this.state = {
@@ -51,7 +51,7 @@ class heroList extends Component {
 													{hero.name}
 												</Card.Title>
 												<Card.Text>
-													<img className='image' src={`${hero.image}`} alt=''/>
+													<img className='image' src={`${hero.image}`} alt='' />
 												</Card.Text>
 											</Card.Body>
 											<Card.Footer style={{ height: '2rem' }}>
@@ -77,4 +77,4 @@ class heroList extends Component {
 	}
 }
 
-export default heroList;
+export default HeroList;

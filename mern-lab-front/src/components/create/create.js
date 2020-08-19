@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 // import axios from 'axios';
 import { Form, Button } from 'react-bootstrap';
 import CreateModal from '../CreateModal/CreateModal';
-class create extends Component {
+class Create extends Component {
 	constructor() {
 		super();
 		this.state = {
@@ -71,4 +71,4 @@ class create extends Component {
 		);
 	}
 }
-export default create;
+export default Create;

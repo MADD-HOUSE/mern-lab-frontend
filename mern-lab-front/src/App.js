@@ -3,28 +3,30 @@ import { Route } from 'react-router-dom';
 import axios from 'axios';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
-import Navbar from './components/nav/Nav';
-import HeroList from './components/heroList/heroList';
+import Navbar from './components/Nav/Nav';
+import HeroList from './components/HeroList/HeroList';
 // import Hero from './components/hero/hero';
-import Home from './components/home/home';
-import Create from './components/create/create';
-import Battle from './components/battle/Battle';
+import Home from './components/Home/Home';
+import Create from './components/Create/Create';
+import Battle from './components/Battle/Battle';
 import UpdateHero from './components/UpdateHero/UpdateHero';
 
 class App extends Component {
 	constructor() {
 		super();
 		this.state = {
-			data: []
+			data: [],
 		};
 	}
 
 	componentWillMount() {
-		axios.get(`https://hero-royale-db-test.herokuapp.com/heroes`).then(res => {
-			this.setState({
-				data: res.data
+		axios
+			.get(`https://hero-royale-db-test.herokuapp.com/heroes`)
+			.then((res) => {
+				this.setState({
+					data: res.data,
+				});
 			});
-		});
 	}
 
 	render() {
@@ -54,9 +56,13 @@ class App extends Component {
 				/>
 				<Route
 					path='/update/:heroid'
-					render={routerProps => {
+					render={(routerProps) => {
 						return (
-							<UpdateHero hero={routerProps.match} heroes={this.state.data} />
+							<UpdateHero
+								history={routerProps.history}
+								hero={routerProps.match}
+								heroes={this.state.data}
+							/>
 						);
 					}}
 				/>

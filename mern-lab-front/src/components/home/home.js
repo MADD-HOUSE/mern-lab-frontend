@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import Image from './superhero-battle-royale.jpg';
-class home extends Component {
+class Home extends Component {
 	render() {
 		return (
 			<div className='homepage'>
@@ -23,4 +23,4 @@ class home extends Component {
 		);
 	}
 }
-export default home;
+export default Home;

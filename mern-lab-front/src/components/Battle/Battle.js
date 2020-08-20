@@ -62,7 +62,12 @@ function BattleModal(props) {
 						)}
 					</div>
 				)}
-				<Button>Battle Again</Button>
+				<Button
+					onClick={() => {
+						props.onHide();
+					}}>
+					Battle Again
+				</Button>
 			</Modal.Footer>
 		</Modal>
 	);

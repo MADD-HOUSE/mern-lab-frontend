@@ -13,7 +13,6 @@ Create or choose a superhero, select an opponent, then pit the two against one a
 ## Front-End Wireframes
 
 ![image](planning/home-page.jpg)
-![image](planning/character-choose-pages.jpg)
 ![image](planning/battle-royale-page.jpg)
 ![image](planning/create-your-own-form.jpg)
 ![image](planning/character-choose-modal-update-delete.jpg)

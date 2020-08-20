@@ -118,6 +118,11 @@ class HeroList extends Component {
 							this.setState({
 								setBattleModalShow: false,
 								battleModalShow: false,
+								modalShow: false,
+								setModalShow: false,
+								fighterOne: null,
+								fighterTwo: null,
+								chosenHero: {},
 							})
 						}
 						fighterOne={this.state.fighterOne}

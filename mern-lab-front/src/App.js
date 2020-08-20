@@ -36,9 +36,14 @@ class App extends Component {
 				<Route
 					exact
 					path='/heroes'
-					render={() => {
+					render={(routerProps) => {
 						this.componentWillMount();
-						return <HeroList heroes={this.state.data} />;
+						return (
+							<HeroList
+								heroes={this.state.data}
+								history={routerProps.history}
+							/>
+						);
 					}}
 				/>
 				<Route

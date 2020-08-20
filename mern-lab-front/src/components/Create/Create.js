@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-// import axios from 'axios';
 import { Form, Button } from 'react-bootstrap';
 import CreateModal from '../CreateModal/CreateModal';
 class Create extends Component {
@@ -61,9 +60,7 @@ class Create extends Component {
 							<p>Durability: {this.state.durability}</p>
 						</Form.Text>
 					</Form.Group>
-					{/* <Form.Group>
-						<Form.File id='addImage' label='Add hero image here' />
-					</Form.Group> */}
+
 					<Button variant='info' onClick={this.rollStats}>
 						Roll for strength and durability
 					</Button>

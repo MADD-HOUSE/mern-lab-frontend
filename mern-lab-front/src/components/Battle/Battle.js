@@ -2,10 +2,6 @@ import React from 'react';
 import { Modal, Button } from 'react-bootstrap';
 
 function BattleModal(props) {
-	// const fighterOneStats =
-	// 	props.fighterOne.strength + props.fighterOne.durability;
-	// const fighterTwoStats =
-	// 	props.fighterTwo.strength + props.fighterTwo.durability;
 	return (
 		<Modal
 			{...props}

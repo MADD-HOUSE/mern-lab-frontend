@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { Card, CardGroup, Button, Container } from 'react-bootstrap';
-import { Route } from 'react-router-dom';
 import './HeroList.css';
 import HeroListModal from '../HeroListModal/HeroListModal';
 import Battle from '../Battle/Battle';
@@ -33,27 +32,25 @@ class HeroList extends Component {
 
 				<Container className='cards'>
 					{this.props.heroes.map((hero) => {
-						// console.log(hero);
 						return (
-							<div key={hero.id}>
+							<div key={hero._id}>
 								<CardGroup>
 									<Button
 										className='hero-card'
 										value={hero._id}
 										onClick={(e) => {
-											// console.log(e.currentTarget.value);
 											const chosenHero = this.props.heroes.find(
 												(hero) => hero._id === e.currentTarget.value
 											);
-											console.log(chosenHero);
+
 											this.setState({
 												setModalShow: true,
 												modalShow: true,
 												chosenHero: chosenHero,
 											});
 										}}
-										style={{ 'background-color': 'rgb(0, 18, 186)' }}>
-										<Card style={{ 'background-color': 'rgb(255, 232, 126)' }}>
+										style={{ backgroundColor: 'rgb(0, 18, 186)' }}>
+										<Card style={{ backgroundColor: 'rgb(255, 232, 126)' }}>
 											<Card.Body>
 												<Card.Title
 													className='text-name'

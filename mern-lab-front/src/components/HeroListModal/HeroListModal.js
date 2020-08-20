@@ -1,9 +1,7 @@
 import React from 'react';
 import { Modal, Button, Image } from 'react-bootstrap';
 import axios from 'axios';
-import UpdateHero from '../UpdateHero/UpdateHero';
 import { Link } from 'react-router-dom';
-import Battle from '../Battle/Battle';
 
 function HeroListModal(props) {
 	const handleDelete = () => {

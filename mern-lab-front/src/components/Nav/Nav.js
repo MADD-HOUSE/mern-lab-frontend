@@ -8,15 +8,15 @@ class NavigationBar extends Component {
 			<div>
 				<Navbar className='navbar'>
 					<Link to='/'>
-						<Navbar.Brand href='#home'>
+						<h2 href='#home'>
 							<span className='superhero'>Superhero</span>
 							<p className='battle'>BATTLE ROYALE</p>
-						</Navbar.Brand>
+						</h2>
 					</Link>
 					<Nav className='mr-auto'>
 						<Link to='/create'>
 							{' '}
-							<Nav.Link href='#features'>Create</Nav.Link>
+							<h5 href='#features'>Create</h5>
 						</Link>
 					</Nav>
 				</Navbar>

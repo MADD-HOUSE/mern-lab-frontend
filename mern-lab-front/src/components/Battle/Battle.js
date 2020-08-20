@@ -45,7 +45,7 @@ function BattleModal(props) {
 			</Modal.Body>
 			<Modal.Footer>
 				{props.fighterOne && props.fighterTwo && (
-					<div>
+					<div className='winner'>
 						{props.fighterOne.strength + props.fighterOne.durability >
 						props.fighterTwo.strength + props.fighterTwo.durability ? (
 							<div>
@@ -59,6 +59,7 @@ function BattleModal(props) {
 					</div>
 				)}
 				<Button
+					className='modal-choose-button'
 					onClick={() => {
 						props.onHide();
 					}}>

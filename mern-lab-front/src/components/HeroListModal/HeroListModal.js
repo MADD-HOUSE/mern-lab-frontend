@@ -61,6 +61,7 @@ function HeroListModal(props) {
 				) : (
 					<div>
 						<Button
+							className='modal-choose-button'
 							variant='danger'
 							onClick={() => {
 								handleDelete();
@@ -70,7 +71,7 @@ function HeroListModal(props) {
 						</Button>
 						<Link to={`/update/${props.chosenHero._id}`}>
 							{' '}
-							<Button>Update</Button>
+							<Button className='modal-choose-button'>Update</Button>
 						</Link>
 					</div>
 				)}
@@ -81,9 +82,13 @@ function HeroListModal(props) {
 						Choose
 					</Button>
 				) : (
-					<Button onClick={props.confirmBattle}>Battle</Button>
+					<Button onClick={props.confirmBattle} className='modal-choose-button'>
+						Battle
+					</Button>
 				)}
-				<Button onClick={props.cancel}>Cancel</Button>
+				<Button onClick={props.cancel} className='modal-choose-button'>
+					Cancel
+				</Button>
 			</Modal.Footer>
 		</Modal>
 	);

@@ -89,3 +89,11 @@ code {
 .versus {
 	margin-top: 75px;
 }
+.winner {
+	font-family: 'Avengers';
+}
+.create-link {
+	font-family: 'Avengers';
+	/* margin-right: auto; */
+	/* justify-content: end; */
+}

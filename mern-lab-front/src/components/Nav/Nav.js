@@ -13,8 +13,8 @@ class NavigationBar extends Component {
 							<p className='battle'>BATTLE ROYALE</p>
 						</h2>
 					</Link>
-					<Nav className='mr-auto'>
-						<Link to='/create'>
+					<Nav className='create-link ml-auto' >
+						<Link to='/create' className='nav justify-content-end'>
 							{' '}
 							<h5 href='#features'>Create</h5>
 						</Link>

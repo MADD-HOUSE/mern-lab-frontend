@@ -1,5 +1,5 @@
 import React from 'react';
-import { Modal, Button } from 'react-bootstrap';
+import { Modal, Button, Image } from 'react-bootstrap';
 import axios from 'axios';
 import UpdateHero from '../UpdateHero/UpdateHero';
 import { Link } from 'react-router-dom';
@@ -33,10 +33,11 @@ function HeroListModal(props) {
 					{props.fighterOne ? (
 						<div>
 							<p>{props.fighterOne.name}</p>
-							<img
+							<Image
 								src={props.fighterOne.image}
 								alt=''
 								className='modal-image'
+								fluid
 							/>
 							<p>Strength: {props.fighterOne.strength}</p>
 							<p>Durability: {props.fighterOne.durability}</p>
@@ -46,10 +47,11 @@ function HeroListModal(props) {
 						''
 					)}
 
-					<img
+					<Image
 						src={props.chosenHero.image}
 						alt={props.chosenHero.name}
 						className='modal-image'
+						fluid
 					/>
 					<p>Strength: {props.chosenHero.strength}</p>
 					<p>Durability: {props.chosenHero.durability}</p>

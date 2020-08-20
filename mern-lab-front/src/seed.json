@@ -1,0 +1,182 @@
+[
+	{
+		"id": 106,
+		"name": "Black Panther",
+		"strength": 16,
+		"durability": 60,
+		"power": 41,
+		"publisher": "Marvel",
+		"image": "https://www.superherodb.com/pictures2/portraits/10/100/247.jpg"
+	},
+	{
+		"id": 157,
+		"name": "Captain Marvel",
+		"strength": 100,
+		"durability": 95,
+		"power": 100,
+		"publisher": "Marvel",
+		"image": "https://www.superherodb.com/pictures2/portraits/10/100/103.jpg"
+	},
+	{
+		"id": 332,
+		"name": "Hulk",
+		"strength": 100,
+		"durability": 100,
+		"power": 98,
+		"publisher": "Marvel",
+		"image": "https://www.superherodb.com/pictures2/portraits/10/100/83.jpg"
+	},
+	{
+		"id": 213,
+		"name": "Deadpool",
+		"strength": 32,
+		"durability": 100,
+		"power": 100,
+		"publisher": "Marvel",
+		"image": "https://www.superherodb.com/pictures2/portraits/10/100/835.jpg"
+	},
+	{
+		"id": 346,
+		"name": "Iron Man",
+		"strength": 85,
+		"durability": 85,
+		"power": 100,
+		"publisher": "Marvel",
+		"image": "https://www.superherodb.com/pictures2/portraits/10/100/85.jpg"
+	},
+	{
+		"id": 620,
+		"name": "Spider-Man",
+		"strength": 55,
+		"durability": 75,
+		"power": 74,
+		"publisher": "Marvel",
+		"image": "https://www.superherodb.com/pictures2/portraits/10/100/133.jpg"
+	},
+	{
+		"id": 717,
+		"name": "Wolverine",
+		"strength": 32,
+		"durability": 100,
+		"power": 89,
+		"publisher": "Marvel",
+		"image": "https://www.superherodb.com/pictures2/portraits/10/100/161.jpg"
+	},
+	{
+		"id": 517,
+		"name": "Phoenix",
+		"strength": 100,
+		"durability": 100,
+		"power": 100,
+		"publisher": "Marvel",
+		"image": "https://www.superherodb.com/pictures2/portraits/10/100/828.jpg"
+	},
+	{
+		"id": 638,
+		"name": "Storm",
+		"strength": 10,
+		"durability": 30,
+		"power": 88,
+		"publisher": "Marvel",
+		"image": "https://www.superherodb.com/pictures2/portraits/10/100/135.jpg"
+	},
+	{
+		"id": 344,
+		"name": "Invisible Woman",
+		"strength": 10,
+		"durability": 85,
+		"power": 93,
+		"publisher": "Marvel",
+		"image": "https://www.superherodb.com/pictures2/portraits/10/100/620.jpg"
+	},
+	{
+		"id": 643,
+		"name": "Supergirl",
+		"strength": 100,
+		"durability": 100,
+		"power": 100,
+		"publisher": "DC",
+		"image": "https://www.superherodb.com/pictures2/portraits/10/100/790.jpg"
+	},
+	{
+		"id": 644,
+		"name": "Superman",
+		"strength": 100,
+		"durability": 100,
+		"power": 100,
+		"publisher": "DC",
+		"image": "https://www.superherodb.com/pictures2/portraits/10/100/791.jpg"
+	},
+	{
+		"id": 38,
+		"name": "Aquaman",
+		"strength": 85,
+		"durability": 80,
+		"power": 100,
+		"publisher": "DC",
+		"image": "https://www.superherodb.com/pictures2/portraits/10/100/634.jpg"
+	},
+	{
+		"id": 720,
+		"name": "Wonder Woman",
+		"strength": 100,
+		"durability": 100,
+		"power": 100,
+		"publisher": "DC",
+		"image": "https://www.superherodb.com/pictures2/portraits/10/100/807.jpg"
+	},
+	{
+		"id": 69,
+		"name": "Batman",
+		"strength": 40,
+		"durability": 55,
+		"power": 63,
+		"publisher": "DC",
+		"image": "https://www.superherodb.com/pictures2/portraits/10/100/10441.jpg"
+	},
+	{
+		"id": 165,
+		"name": "Catwoman",
+		"strength": 11,
+		"durability": 28,
+		"power": 27,
+		"publisher": "DC",
+		"image": "https://www.superherodb.com/pictures2/portraits/10/100/659.jpg"
+	},
+	{
+		"id": 263,
+		"name": "Flash",
+		"strength": 10,
+		"durability": 50,
+		"power": 68,
+		"publisher": "DC",
+		"image": "https://www.superherodb.com/pictures2/portraits/10/100/891.jpg"
+	},
+	{
+		"id": 156,
+		"name": "Shazam",
+		"strength": 100,
+		"durability": 95,
+		"power": 100,
+		"publisher": "DC",
+		"image": "https://www.superherodb.com/pictures2/portraits/10/100/278.jpg"
+	},
+	{
+		"id": 309,
+		"name": "Harley Quinn",
+		"strength": 12,
+		"durability": 65,
+		"power": 55,
+		"publisher": "DC",
+		"image": "https://www.superherodb.com/pictures2/portraits/10/100/701.jpg"
+	},
+	{
+		"id": 542,
+		"name": "Raven",
+		"strength": 10,
+		"durability": 70,
+		"power": 84,
+		"publisher": "DC",
+		"image": "https://www.superherodb.com/pictures2/portraits/10/100/764.jpg"
+	}
+]

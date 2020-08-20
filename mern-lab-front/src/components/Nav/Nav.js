@@ -7,14 +7,17 @@ class NavigationBar extends Component {
 		return (
 			<div>
 				<Navbar className='navbar'>
-					<Link to='/'>
+					<Link to='/' style={{ textDecoration: 'none' }}>
 						<h2 href='#home'>
 							<span className='superhero'>Superhero</span>
 							<p className='battle'>BATTLE ROYALE</p>
 						</h2>
 					</Link>
-					<Nav className='create-link ml-auto' >
-						<Link to='/create' className='nav justify-content-end'>
+					<Nav className='create-link ml-auto'>
+						<Link
+							to='/create'
+							className='nav justify-content-end'
+							style={{ textDecoration: 'none' }}>
 							{' '}
 							<h5 href='#features'>Create</h5>
 						</Link>
